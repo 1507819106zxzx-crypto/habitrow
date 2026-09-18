@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — HabitRow</title>
+<meta name="description" content="HabitRow collects no data. It has no internet permission, no account, no analytics and no ads. Everything stays on your device.">
+<style>
+  :root{
+    --bg:#FBF9F4; --fg:#1A1C19; --muted:#434942; --line:#C3C8BF;
+    --accent:#1A6A4A; --card:#F5F3ED;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#12140F; --fg:#E2E3DD; --muted:#C2C9BC; --line:#424940;
+           --accent:#6FDBA6; --card:#1B1E19; }
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--fg);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif;
+    -webkit-text-size-adjust:100%;
+  }
+  .wrap{max-width:720px;margin:0 auto;padding:48px 20px 96px}
+  h1{font-size:30px;line-height:1.25;margin:0 0 6px;letter-spacing:-.4px}
+  h2{font-size:20px;margin:40px 0 10px;letter-spacing:-.2px}
+  h3{font-size:16px;margin:26px 0 6px}
+  p,li{color:var(--muted)}
+  a{color:var(--accent)}
+  .meta{color:var(--muted);font-size:14px;margin:0 0 32px}
+  .lede{color:var(--fg);font-size:18px;line-height:1.6}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:24px 0}
+  .card p:last-child,.card ul:last-child{margin-bottom:0}
+  table{border-collapse:collapse;width:100%;margin:14px 0;font-size:15px}
+  th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:var(--fg);font-weight:600;white-space:nowrap}
+  code{background:var(--card);border:1px solid var(--line);border-radius:5px;padding:1px 5px;font-size:13px}
+  hr{border:0;border-top:1px solid var(--line);margin:56px 0}
+  .lang{font-size:14px;margin:0 0 28px}
+  footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<p class="lang"><a href="#zh">中文版本 ↓</a></p>
+
+<h1>HabitRow Privacy Policy</h1>
+<p class="meta">Last updated: 18 September 2026 · Applies to the HabitRow Android app (<code>app.habitrow.tracker</code>)</p>
+
+<p class="lede"><strong>HabitRow does not collect any data.</strong> Not anonymised data, not
+&ldquo;usage statistics&rdquo;, not crash reports. There is no account, no sign-in, no advertising and
+no analytics of any kind.</p>
+
+<div class="card">
+<p><strong>You do not have to take our word for it.</strong> HabitRow does not request the
+<code>INTERNET</code> permission. Android will not let an app open a network connection without it,
+so the app is <em>technically incapable</em> of sending your habits anywhere. You can verify this
+yourself: Android Settings &rarr; Apps &rarr; HabitRow &rarr; Permissions, or run
+<code>adb shell dumpsys package app.habitrow.tracker</code>.</p>
+</div>
+
+<h2>What is stored, and where</h2>
+<p>Everything HabitRow knows lives in the app's own private storage on your phone:</p>
+<ul>
+  <li>Your habits — their names, colours, schedules and reminder times</li>
+  <li>Which days you have checked off</li>
+  <li>Your settings — day-start hour, week-start day, theme</li>
+</ul>
+<p>This data is readable only by HabitRow. It is never uploaded, never synchronised, and never
+shared with us or anyone else, because there is nowhere for it to go.</p>
+
+<h2>Permissions, and why each one exists</h2>
+<table>
+  <tr><th>Permission</th><th>Why</th></tr>
+  <tr><td><code>POST_NOTIFICATIONS</code></td><td>To show a habit reminder, only if you turn one on. Requested at that moment, never at first launch.</td></tr>
+  <tr><td><code>RECEIVE_BOOT_COMPLETED</code></td><td>Alarms do not survive a restart. This re-registers your reminders after the phone reboots.</td></tr>
+  <tr><td><code>VIBRATE</code></td><td>The short haptic tick when you check a habit off.</td></tr>
+  <tr><td><code>com.android.vending.BILLING</code></td><td>Required by Google Play to offer the optional one-time Pro purchase.</td></tr>
+  <tr><td><code>ACCESS_NETWORK_STATE</code><br><code>WAKE_LOCK</code><br><code>FOREGROUND_SERVICE</code></td><td>Declared by an Android system library the home-screen widget is built on (Jetpack WorkManager). HabitRow itself never schedules background work, never starts a foreground service, and — having no <code>INTERNET</code> permission — cannot use network access regardless of what the network-state permission would otherwise allow.</td></tr>
+</table>
+<p><strong>There is no <code>INTERNET</code> permission and no advertising ID permission.</strong></p>
+
+<h2>Purchases</h2>
+<p>HabitRow offers one optional, one-time purchase (&ldquo;Pro&rdquo;). It is not a subscription and
+it does not renew.</p>
+<p>The purchase is processed entirely by <strong>Google Play</strong>. We never see and never receive
+your name, card details, billing address or any other payment information. HabitRow only ever learns
+one thing from Google Play: whether this Google account owns the Pro unlock. Google's handling of
+your purchase is governed by the
+<a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a>.</p>
+<p>For refunds, use the Google Play refund process, or email us and we will help.</p>
+
+<h2>Backups</h2>
+<p>If you have Android's system backup enabled, Android may include HabitRow's habit data in your
+own Google account backup. That is a feature of Android, under your control, and we have no access
+to it. You can turn it off in Android Settings &rarr; Google &rarr; Backup. Your Pro purchase
+status is deliberately excluded from that backup.</p>
+<p>You can also export your data yourself, to a file you choose, from Settings &rarr; Back up to a
+file. That file is yours; HabitRow does not upload it anywhere.</p>
+
+<h2>Children</h2>
+<p>HabitRow is not directed at children under 13, and because it collects nothing, it collects
+nothing from children either.</p>
+
+<h2>Deleting your data</h2>
+<p>Two ways, both immediate and complete:</p>
+<ul>
+  <li><strong>In the app:</strong> Settings &rarr; Delete all data.</li>
+  <li><strong>Uninstall HabitRow.</strong> Android removes the app's private storage with it.</li>
+</ul>
+<p>There is no server-side copy to request the deletion of, because there is no server.</p>
+
+<h2>Changes to this policy</h2>
+<p>If HabitRow ever starts collecting anything, this page will be updated before that version ships,
+and the change will be called out in the app's release notes. The date at the top always reflects the
+current version.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy, or about the app: <a href="mailto:1507819106zxzx@gmail.com">1507819106zxzx@gmail.com</a></p>
+
+<hr>
+
+<h1 id="zh">HabitRow 隐私政策</h1>
+<p class="meta">最后更新：2026 年 9 月 18 日 · 适用于 HabitRow Android 应用（<code>app.habitrow.tracker</code>）</p>
+
+<p class="lede"><strong>HabitRow 不收集任何数据。</strong>不收集匿名数据，不收集「使用统计」，不收集崩溃报告。没有账号，无需登录，没有广告，没有任何形式的数据分析。</p>
+
+<div class="card">
+<p><strong>这一点你可以自己验证，不必相信我们的说法。</strong>HabitRow 没有申请 <code>INTERNET</code>（联网）权限。Android 系统不允许没有该权限的应用建立网络连接，因此本应用<em>在技术上就无法</em>把你的数据发送到任何地方。验证方式：系统设置 → 应用 → HabitRow → 权限，或执行 <code>adb shell dumpsys package app.habitrow.tracker</code>。</p>
+</div>
+
+<h2>存储了什么，存在哪里</h2>
+<p>HabitRow 所知道的一切都保存在你手机上该应用的私有存储区内：</p>
+<ul>
+  <li>你的习惯——名称、颜色、频率和提醒时间</li>
+  <li>你打过卡的日期</li>
+  <li>你的设置——一天的开始时间、每周第一天、主题</li>
+</ul>
+<p>这些数据只有 HabitRow 能读取。它们从不上传、从不同步、也从不与我们或任何第三方共享——因为根本没有可去之处。</p>
+
+<h2>各项权限及其用途</h2>
+<table>
+  <tr><th>权限</th><th>用途</th></tr>
+  <tr><td><code>POST_NOTIFICATIONS</code></td><td>在你主动开启提醒时发送习惯提醒。仅在那一刻请求，绝不在首次启动时请求。</td></tr>
+  <tr><td><code>RECEIVE_BOOT_COMPLETED</code></td><td>闹钟无法在重启后保留。此权限用于在手机重启后重新注册你的提醒。</td></tr>
+  <tr><td><code>VIBRATE</code></td><td>打卡时的短促触感反馈。</td></tr>
+  <tr><td><code>com.android.vending.BILLING</code></td><td>Google Play 要求，用于提供可选的一次性 Pro 购买。</td></tr>
+  <tr><td><code>ACCESS_NETWORK_STATE</code><br><code>WAKE_LOCK</code><br><code>FOREGROUND_SERVICE</code></td><td>由桌面小组件所依赖的 Android 系统库（Jetpack WorkManager）声明。HabitRow 本身从不调度后台任务，从不启动前台服务；且由于没有 <code>INTERNET</code> 权限，即使有网络状态权限也无法进行任何网络访问。</td></tr>
+</table>
+<p><strong>本应用没有 <code>INTERNET</code> 权限，也没有广告标识符权限。</strong></p>
+
+<h2>关于购买</h2>
+<p>HabitRow 提供一项可选的一次性购买（「Pro」）。它不是订阅，不会自动续费。</p>
+<p>购买流程完全由 <strong>Google Play</strong> 处理。我们从不接触也从不接收你的姓名、银行卡信息、账单地址或任何其他支付信息。HabitRow 从 Google Play 只获知一件事：当前 Google 账号是否拥有 Pro 解锁。Google 对你购买行为的处理适用
+<a href="https://policies.google.com/privacy" rel="noopener">Google 隐私权政策</a>。</p>
+<p>如需退款，请使用 Google Play 的退款流程，或发邮件给我们协助处理。</p>
+
+<h2>关于备份</h2>
+<p>如果你启用了 Android 的系统备份，Android 可能会把 HabitRow 的习惯数据纳入你自己的 Google 账号备份。这是 Android 的功能，由你控制，我们无权访问。你可以在系统设置 → Google → 备份中关闭它。你的 Pro 购买状态已被刻意排除在该备份之外。</p>
+<p>你也可以自行导出数据到你指定的文件：设置 → 备份到文件。该文件归你所有，HabitRow 不会将其上传到任何地方。</p>
+
+<h2>关于儿童</h2>
+<p>HabitRow 并非面向 13 岁以下儿童设计。由于本应用不收集任何数据，自然也不会收集儿童的任何数据。</p>
+
+<h2>删除你的数据</h2>
+<p>两种方式，都是立即且彻底的：</p>
+<ul>
+  <li><strong>在应用内：</strong>设置 → 删除全部数据。</li>
+  <li><strong>卸载 HabitRow。</strong>Android 会连同应用的私有存储一并删除。</li>
+</ul>
+<p>不存在需要申请删除的服务器端副本，因为根本没有服务器。</p>
+
+<h2>本政策的变更</h2>
+<p>如果 HabitRow 将来开始收集任何数据，本页面会在该版本发布之前更新，并在应用的更新说明中明确指出。页首的日期始终对应当前版本。</p>
+
+<h2>联系方式</h2>
+<p>关于本政策或应用的任何问题：<a href="mailto:1507819106zxzx@gmail.com">1507819106zxzx@gmail.com</a></p>
+
+<footer>
+HabitRow · <a href="./">habitrow</a>
+</footer>
+
+</div>
+</body>
+</html>

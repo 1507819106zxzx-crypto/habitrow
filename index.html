@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HabitRow — a habit tracker whose widget actually updates</title>
+<meta name="description" content="Tap a circle on your home screen and the habit is done. Unlimited habits, every widget free, no account, no ads, and no internet permission at all.">
+<meta property="og:title" content="HabitRow">
+<meta property="og:description" content="A habit tracker built around one idea: the widget is the product.">
+<style>
+  :root{ --bg:#FBF9F4; --fg:#1A1C19; --muted:#434942; --line:#C3C8BF;
+         --accent:#1A6A4A; --accent-fg:#fff; --card:#F5F3ED; }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#12140F; --fg:#E2E3DD; --muted:#C2C9BC; --line:#424940;
+           --accent:#6FDBA6; --accent-fg:#003823; --card:#1B1E19; }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif}
+  .wrap{max-width:680px;margin:0 auto;padding:72px 20px 96px}
+  h1{font-size:clamp(34px,7vw,46px);line-height:1.1;margin:0 0 14px;letter-spacing:-1px}
+  .tag{font-size:20px;color:var(--muted);margin:0 0 36px;line-height:1.5}
+  h2{font-size:19px;margin:44px 0 10px;letter-spacing:-.2px}
+  p,li{color:var(--muted)}
+  a{color:var(--accent)}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:26px 0}
+  .card p:last-child{margin-bottom:0}
+  ul{padding-left:20px}
+  li{margin:6px 0}
+  code{background:var(--card);border:1px solid var(--line);border-radius:5px;padding:1px 5px;font-size:13px}
+  .cta{display:inline-block;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+       font-weight:600;padding:13px 22px;border-radius:999px;margin-top:6px}
+  footer{margin-top:64px;padding-top:20px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>HabitRow</h1>
+  <p class="tag">Tap a circle on your home screen and the habit is done.<br>You never have to open the app.</p>
+
+  <!-- Replace with the Play listing URL once the app is live. -->
+  <a class="cta" href="#">Coming soon to Google Play</a>
+
+  <h2>The widget is the product</h2>
+  <p>Most habit trackers treat the widget as a bonus. This one is built the other way round: the widget
+  reads straight from your data and repaints on every change &mdash; when you tap it, when you edit a
+  habit, at midnight rollover, and after a timezone change. It will never show you yesterday.</p>
+
+  <h2>Free, and staying that way</h2>
+  <ul>
+    <li><strong>Unlimited habits.</strong> There is no three-habit wall.</li>
+    <li><strong>Every widget size, unlimited instances.</strong> Never locked, never badged, never an upsell.</li>
+    <li>Streaks, reminders, calendar back-fill, backup and restore.</li>
+    <li>No account. No ads. No tracking.</li>
+  </ul>
+
+  <h2>Streaks that make sense</h2>
+  <p>Streaks are recomputed from your history, never stored. Forgot Tuesday? Back-fill it and the streak
+  repairs itself everywhere, instantly. Today never counts as a miss until it has ended.</p>
+  <p>If you want slack, pick a schedule that gives you slack &mdash; <em>N times a week</em> is a real
+  option. We will never sell you a streak repair.</p>
+
+  <div class="card">
+    <p><strong>Private by construction, not by promise.</strong> HabitRow does not request the
+    <code>INTERNET</code> permission. Android will not let an app open a network connection without it,
+    so it is physically incapable of sending your habits anywhere. Check the permission list yourself.</p>
+  </div>
+
+  <h2>HabitRow Pro</h2>
+  <p>Optional, one payment, never a subscription. Adds a year heatmap, deeper statistics, CSV export,
+  automatic backup and an AMOLED true-black theme. Everything above stays free whether you buy it or not.</p>
+
+  <footer>
+    <a href="./privacy.html">Privacy policy</a>
+  </footer>
+
+</div>
+</body>
+</html>
